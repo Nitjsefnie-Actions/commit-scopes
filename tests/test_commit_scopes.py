@@ -443,7 +443,7 @@ def test_composite_step_judges_the_workspace_it_runs_in(tmp):
         repo, _ = _fixture(root, head_subject=subject)
         environment = {**os.environ, 'GITHUB_WORKSPACE': str(repo)}
         environment.update({key: expressions[value] for key, value in step['env'].items()})
-        # The runner's interpreter name varies by OS; the step's paths and arguments are what is under test.
+        # The interpreter's name varies by OS; the step's paths and arguments are under test.
         run = step['run'].replace('python3', f'"{Path(sys.executable).as_posix()}"', 1)
         done = subprocess.run([_action_bash(), '-c', run], cwd=root, env=environment,
                               capture_output=True, text=True, timeout=60, check=False)

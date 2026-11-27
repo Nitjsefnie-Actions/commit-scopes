@@ -33,14 +33,16 @@ def test_tmp_is_removed_after_its_test(tmp):
                          f'    open({str(record)!r}, "w", encoding="utf-8").write(str(tmp))\n'})
     assert done.returncode == 0, done.stdout + done.stderr
     seen = Path(record.read_text(encoding='utf-8'))
-    assert seen.name.startswith('commit_scopes_tests_') and not seen.parent.exists()  # the run's too
+    assert seen.name.startswith('commit_scopes_tests_')
+    assert not seen.parent.exists()  # the run's too
     assert seen.parent.parent == tmp.parent.parent  # beside this run's, never inside it
 
 
 def test_a_killed_runs_tmp_is_removed_by_the_next_run(tmp):
     record, write = tmp / 'left.txt', f'open({str(tmp / "left.txt")!r}, "a").write'
     code = ('import os, subprocess, sys, tempfile\n\n'
-            f'def _killed():\n    {write}(os.path.join(tempfile.mkdtemp(prefix="commit-scopes-"), "x") + "\\n")\n'
+            'def _killed():\n'
+            f'    {write}(os.path.join(tempfile.mkdtemp(prefix="commit-scopes-"), "x") + "\\n")\n'
             '    os._exit(9)\n\n'
             'if __name__ == "__main__":\n    _killed()\n\n'
             f'def test_left(tmp):\n    {write}(str(tmp) + "\\n")\n'

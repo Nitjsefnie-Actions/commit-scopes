@@ -8,7 +8,8 @@
       ],
       "tests/test_conftest.py": [
         7.74,
-        10.17
+        10.17,
+        13.36
       ],
       "tests/test_release_dispatch.py": [
         0.94
@@ -45,7 +46,8 @@
       ],
       "tests/test_conftest.py": [
         7.39,
-        9.61
+        9.61,
+        13.9
       ],
       "tests/test_release_dispatch.py": [
         0.75
@@ -77,10 +79,12 @@
     },
     "windows-latest / Python 3.14": {
       "tests/test_commit_scopes.py": [
-        29.97
+        29.97,
+        19.55
       ],
       "tests/test_conftest.py": [
-        11.83
+        11.83,
+        16.64
       ],
       "tests/test_release_dispatch.py": [
         1.78

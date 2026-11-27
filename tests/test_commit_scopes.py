@@ -16,8 +16,6 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
-from scripts.ci import pr_commits
 
 
 def _load():
@@ -137,8 +135,6 @@ def test_scope_read_by_the_gates_own_rule(tmp):
             ('fix(): x', None)):
         match = module.SUBJECT.match(subject)
         assert (match and match['scope']) == scope, subject
-        reasons = pr_commits.subject_reasons([{'commit': {'message': subject}}])
-        assert (not reasons) == (scope is not None), subject
 
 
 def test_subjects_that_do_not_parse_are_listed_not_failed(tmp):

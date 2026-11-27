@@ -50,10 +50,6 @@ scripts/*
 !scripts/ci/
 scripts/ci/*
 !scripts/ci/commit_scopes.py
-!scripts/ci/pr_attribution.py
-!scripts/ci/pr_body.py
-!scripts/ci/pr_body_closing.py
-!scripts/ci/pr_commits.py
 !scripts/ci/release_dispatch.py
 !scripts/ci/type_ratchet.py
 !tests/

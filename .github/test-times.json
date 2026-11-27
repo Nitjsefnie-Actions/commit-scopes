@@ -3,10 +3,12 @@
   "cells": {
     "macos-latest / Python 3.14": {
       "tests/test_commit_scopes.py": [
-        12.8
+        12.8,
+        5.56
       ],
       "tests/test_conftest.py": [
-        7.74
+        7.74,
+        10.17
       ],
       "tests/test_release_dispatch.py": [
         0.94
@@ -20,10 +22,12 @@
     },
     "macos-latest / Python 3.15": {
       "tests/test_commit_scopes.py": [
-        6.18
+        6.18,
+        11.87
       ],
       "tests/test_conftest.py": [
-        6.28
+        6.28,
+        12.76
       ],
       "tests/test_release_dispatch.py": [
         0.8
@@ -40,7 +44,8 @@
         3.72
       ],
       "tests/test_conftest.py": [
-        7.39
+        7.39,
+        9.61
       ],
       "tests/test_release_dispatch.py": [
         0.75
@@ -57,7 +62,8 @@
         4.55
       ],
       "tests/test_conftest.py": [
-        7.14
+        7.14,
+        14.59
       ],
       "tests/test_release_dispatch.py": [
         0.68
@@ -88,10 +94,12 @@
     },
     "windows-latest / Python 3.15": {
       "tests/test_commit_scopes.py": [
-        18.32
+        18.32,
+        24.88
       ],
       "tests/test_conftest.py": [
-        8.72
+        8.72,
+        14.22
       ],
       "tests/test_release_dispatch.py": [
         1.28

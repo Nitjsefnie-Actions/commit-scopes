@@ -1,0 +1,12 @@
+name: Commit scopes
+description: Fail a pull request commit whose scope names a workflow while its type is not ci.
+author: Nitjsefnie
+runs:
+  using: composite
+  steps:
+    - name: Refuse a commit whose scope names a workflow outside the ci type
+      shell: bash
+      env:
+        COMMIT_SCOPES_ACTION_PATH: ${{ github.action_path }}
+        COMMIT_SCOPES_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+      run: python3 "$COMMIT_SCOPES_ACTION_PATH/scripts/ci/commit_scopes.py" --root "$GITHUB_WORKSPACE"

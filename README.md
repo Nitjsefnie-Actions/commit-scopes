@@ -17,7 +17,7 @@ library only). The action fetches the repository's default branch itself.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: Nitjsefnie-Actions/commit-scopes@<sha> # vX.Y.Z
+      - uses: Nitjsefnie-Actions/commit-scopes@645ca8f43b00199cebeed7a5d305b4224e902a60 # v1.0.0
 ```
 
 Put the step in a job the required aggregate already folds: a new job is a new

@@ -43,10 +43,6 @@
     5942,
     11664
   ],
-  "scripts/ci/pr_body_closing.py": [
-    1499,
-    2033
-  ],
   "scripts/ci/type_ratchet.py": [
     1279,
     4191

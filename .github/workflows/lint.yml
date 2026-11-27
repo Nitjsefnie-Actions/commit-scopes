@@ -49,6 +49,10 @@ jobs:
         with:
           persist-credentials: false
 
+      # In this job, not a new one: `lint` is a required context already.
+      - if: github.event_name == 'pull_request' || github.ref_name == github.event.repository.default_branch
+        uses: Nitjsefnie-Actions/freshness@5edc2a45ff894cf49c5cc8d293bbae0af33507d4 # v1.0.0
+
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: "3.15"

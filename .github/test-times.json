@@ -9,7 +9,8 @@
       "tests/test_conftest.py": [
         7.74,
         10.17,
-        13.36
+        13.36,
+        4.16
       ],
       "tests/test_release_dispatch.py": [
         0.94
@@ -107,7 +108,8 @@
         14.22
       ],
       "tests/test_release_dispatch.py": [
-        1.28
+        1.28,
+        2.36
       ],
       "tests/test_type_ratchet.py": [
         0.53

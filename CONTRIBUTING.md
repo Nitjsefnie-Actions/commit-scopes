@@ -87,7 +87,7 @@ Seed representative junk when reopening directories and prove it stays ignored.
 
 ## Issues, pull requests, and commits
 
-Use the shipped [bug report](.github/ISSUE_TEMPLATE/bug-report.md) and
+Use the shipped [issue form](.github/ISSUE_TEMPLATE/issue.md) and
 [PR template](.github/PULL_REQUEST_TEMPLATE.md). Keep required sections, remove
 inapplicable optional/conditional sections and instructions, report exact
 commands/results, and put closing references only in Related Issues and Pull

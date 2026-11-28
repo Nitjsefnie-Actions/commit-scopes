@@ -26,7 +26,7 @@
 !.github/size-baseline.json
 !.github/ISSUE_TEMPLATE/
 .github/ISSUE_TEMPLATE/*
-!.github/ISSUE_TEMPLATE/bug-report.md
+!.github/ISSUE_TEMPLATE/issue.md
 !.github/workflows/
 .github/workflows/*
 !.github/workflows/actionlint.yml

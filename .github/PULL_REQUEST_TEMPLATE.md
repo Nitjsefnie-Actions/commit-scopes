@@ -1,37 +1,65 @@
-## Summary
+<!--
+The PR Report Contract, rendered as a form.
 
-<!-- Required. Keep this section. In 1–2 sentences, state what changed and why. If there is genuinely nothing to report, state "None" explicitly. -->
+  required     always present; when the answer is "none", say so explicitly
+  conditional  always CHECKED, but dropped entirely — header included — when
+               the condition is not met
+  optional     dropped entirely when it does not apply
+
+Section order is fixed. No new sections. Delete these comments before posting.
+-->
+
+## Summary
+<!-- required: 1-2 sentences — what changed and why. -->
 
 ## Related Issues and Pull Requests
+<!-- required: claim the issue with `/claim` before you start, then name it
+     here, plus any related work. Closing keywords ONLY here. The named issue
+     must be assigned to the PR author. The gate comments with every mismatch and
+     fails its check until an edit fixes it; it never closes or reopens a pull
+     request. GitHub auto-closes only on merge into the DEFAULT branch. -->
 
-<!-- Conditional: always check whether this pull request resolves or relates to existing work. Keep this section only when it applies; otherwise delete the heading and this comment. Put closing keywords only here, using lines such as "Fixes #123", "Relates to #456", or "Depends on #789". Note: GitHub only auto-closes on merge into the DEFAULT branch. When the base is a dev/next/release branch, Fixes #N will not close the issue — close it by hand after the merge. -->
+Fixes #
 
 ## Changes
+<!-- required: bullet list of concrete changes — files, modules, behavior.
+     At most two sentences per bullet; split a longer one. Tests added or
+     changed are changes and belong here, not under Testing. -->
 
-<!-- Required. Keep this section. Add a bullet list of concrete file, module, and behavior changes. If there are no concrete changes, write "- None" explicitly. -->
+-
 
 ## Testing
+<!-- required: checkbox list of the GATES that were run and their outcome — not
+     an enumeration of the tests added, which belongs under Changes. Check a
+     box only for a gate actually run whose result you read; leave it unchecked
+     and say why when a gate was skipped. Add boxes for any other gate you ran;
+     at most one sentence per box. If nothing was run, say so and why. -->
 
-<!-- Required. Keep this section. State exactly what was run or checked and the result. If nothing was tested, say so and explain why. -->
+- [ ] Test suite (`python -m pytest -n auto tests/`)
+- [ ] Python lint and types (ruff, pycodestyle, pylint, pyright ratchet)
+- [ ] Workflow and action lint (actionlint and zizmor)
+- [ ] CI
 
 ## Bugs Discovered
+<!-- conditional: pointer list of ALREADY-FILED issues — number plus the
+     issue's literal title, copied exactly — for every defect this branch
+     surfaced: one you filed, and one that already existed and now carries
+     your sighting as a comment. No paraphrase, no description; the report
+     lives in the issue. Drop the section if none were found. -->
 
-<!-- Conditional: always check for bugs discovered during this work. Keep this section only when at least one bug was filed first; otherwise delete the heading and this comment. This is only a pointer list in the exact form "- #123 Literal issue title". Copy every filed title verbatim and add no description or context here. -->
+-
 
 ## Breaking Changes
-
-<!-- Optional. Keep this section only when it applies; otherwise delete the heading and this comment. -->
+<!-- optional -->
 
 ## Follow-ups / Known Limitations
-
-<!-- Optional. Keep this section only when it applies; otherwise delete the heading and this comment. Put caveats about this change here; durable bugs must still be filed separately. -->
+<!-- optional: caveats about our own fix go here; this never waives filing a
+     durable defect as its own issue. -->
 
 ## Dependencies
-
-<!-- Optional. Keep this section only when it applies; otherwise delete the heading and this comment. -->
+<!-- optional -->
 
 ## Footer
-
 <!-- optional, last line: drop it when a human both implemented the
      change and filed this pull request, and include it otherwise. One
      entry per model, roles merged — never repeat a model name.

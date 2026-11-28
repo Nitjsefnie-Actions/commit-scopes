@@ -1,9 +1,9 @@
 name: types
 
 # The static type checker over the tree's Python. No other check answers
-# "what types does this code actually have"; this code parses untrusted
-# pull-request text and writes with a write token, so a typing defect is an
-# admission-gate defect.
+# "what types does this code actually have"; this code parses the commit
+# subjects of the change it judges, text its author controls, so a typing
+# defect is an admission-gate defect.
 #
 # pyright runs in basic mode over exactly the tracked Python
 # (pyrightconfig.json: scripts/ci, tests), version-pinned

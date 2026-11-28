@@ -20,9 +20,8 @@ library only). The action fetches the repository's default branch itself.
       - uses: Nitjsefnie-Actions/commit-scopes@645ca8f43b00199cebeed7a5d305b4224e902a60 # v1.0.0
 ```
 
-Put the step in a job the required aggregate already folds: a new job is a new
-required context only once the ruleset or the aggregate names it. The action
-has no inputs.
+Put the step in a job that is already a required check: a new job is a new
+required context only once the ruleset names it. The action has no inputs.
 
 ## What it checks
 

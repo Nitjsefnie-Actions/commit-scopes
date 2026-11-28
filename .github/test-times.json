@@ -44,7 +44,8 @@
     },
     "ubuntu-latest / Python 3.14": {
       "tests/test_commit_scopes.py": [
-        3.72
+        3.72,
+        4.85
       ],
       "tests/test_conftest.py": [
         7.39,
@@ -102,11 +103,13 @@
     "windows-latest / Python 3.15": {
       "tests/test_commit_scopes.py": [
         18.32,
-        24.88
+        24.88,
+        31.76
       ],
       "tests/test_conftest.py": [
         8.72,
-        14.22
+        14.22,
+        18.88
       ],
       "tests/test_release_dispatch.py": [
         1.28,
